@@ -1,0 +1,1 @@
+module.exports.GET_show = (req, res, next) => res.render("show");

@@ -1,0 +1,1 @@
+module.exports.GET_upload = (req, res, next) => res.render("upload");
