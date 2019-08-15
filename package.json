@@ -18,6 +18,7 @@
   "homepage": "https://github.com/LetsTrie/Node-JS-with-AWS-S3#readme",
   "description": "",
   "dependencies": {
+    "@hapi/joi": "^15.1.0",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "dotenv": "^8.0.0",

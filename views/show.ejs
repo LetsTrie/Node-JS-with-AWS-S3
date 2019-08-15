@@ -19,22 +19,23 @@
   </section>
 
   <div class="showAll">
-    <% for(let i = 1 ; i <= 2 ; i++) { %>
+    <% posts.forEach(post => { %>
       <div class="show">
         <div class="name">
-          <p> MD. Sakib Khan </p>
+          <p> <%= post.username %> </p>
         </div>
         <div class="updateDelete">
           <button>Update</button>
           <button>Delete</button>
+          <a href="/image_post/<%=post.photoURL%>" download> <button>Download</button> </a> 
         </div>
 
         <div class="image">
-          <img src="/image.jpg" alt="">
+          <img src="/image_post/<%=post.photoURL%>" alt="image">
         </div>
       </div> 
 
-    <% } %>
+    <% }); %>
   </div>
 
   <script src="/main.js"> </script>
