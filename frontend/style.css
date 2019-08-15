@@ -192,7 +192,7 @@ input[type="file"] {
     animation: fromBottom .8s 1.0s ease-in backwards;
 }
 
-button {
+.button button {
     padding: 15px 40px;
     font-size: 30px;
     border-radius: 10px;
@@ -204,7 +204,7 @@ button {
     transition: background .4s;
 }
 
-button:hover {
+.button button:hover {
     background: black;
 }
 
@@ -229,3 +229,77 @@ button:hover {
 /* ##################################### */
 /* Page ==> Show Photo */
 /* ##################################### */
+
+.showAll {
+    width: 100%;
+    padding: 40px;
+}
+
+.show {
+    width: 90%;
+    margin: 0px auto 50px auto;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    padding: 30px 50px;
+    box-shadow: 10px 10px 20px gray;
+    border-radius: 10px;
+    border: 1px solid gray;
+    text-align: center;
+    background: #d7e0e6;  /* fallback for old browsers */
+}
+
+.show:nth-child(even) {
+    animation: fromLeft 1.0s .6s ease-in backwards;
+}
+
+
+.show:nth-child(odd) {
+    animation: fromRight 1.0s .6s ease-in backwards;
+}
+
+.show .name {
+    font-size: 40px;
+    display: inline-block;
+    position: relative;
+}
+
+
+.show .name::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    left: 0;
+    height: 5px;
+    background: black;
+}
+
+.updateDelete {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; 
+}
+
+.updateDelete button {
+    margin: 10px;
+    padding: 10px 32px;
+    font-size: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-family: 'Thasadith', sans-serif;
+    background: rgba(192, 46, 46, 0.89);
+    color: white;
+    transition: background .4s;
+}
+
+.updateDelete button:hover {
+    background: rgb(161, 43, 43);
+}
+
+.image img {
+    max-height: 350px;
+    max-width: 500px;
+}
