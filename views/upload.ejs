@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Upload Photo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="/style.css">
+
+  <title>Upload Photo</title>
 </head>
+
 <body>
-    <h1> Upload Photos </h1>
+  <section class="main">
+    <!-- Navigation START -->
+    <% include ./partials/nav.ejs %>
+    <!-- Navigation END -->
+    
+    <div class="form">
+      <form action="#" method="POST" enctype="multipart/form-data">
+        
+        <div class="box">
+          <div class="title"> <p> Username : </p> </div>
+          <input type="text" name="username" placeholder="Username" required>
+        </div>
+
+        <div class="box">
+          <!-- https://codepen.io/siremilomir/pen/jBbQGo -->
+          <!-- https://codepen.io/gaitho/pen/mjBBLP -->
+          <!-- https://codepen.io/TheLukasWeb/pen/qlGDa -->
+          <div class="title"> <p> Choose An Image : </p> </div>
+          <div class="fileBox" id="fileBoxID">
+            <div class="drag">
+                <p id="dragP"> Drag your photo or click here to upload </p>
+                <img src="" alt="" class="hidden" id="image-preview">
+            </div>
+            <input type="file" name="image" id="image" accept=".png, .jpg, .jpeg" required>
+          </div>
+        </div>
+
+        <div class="button box">
+          <button> Upload </button>
+        </div>
+
+      </form>
+    </div>
+
+  </section>
+  <script src="/main.js"> </script>
+
 </body>
+
 </html>
