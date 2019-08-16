@@ -6,5 +6,7 @@ router.get("/", upload.GET_upload);
 router.post("/", upload.POST_upload);
 
 const show = require("../controllers/show");
-router.get("/show", show.GET_show);
+router.get("/show", show.GET_post);
+router.get("/show/delete/:id/:photoURL", show.DELETE_POST);
+
 module.exports = router;
