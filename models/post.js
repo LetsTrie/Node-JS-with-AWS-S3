@@ -11,6 +11,10 @@ const postSchema = new Schema({
         type: String,
         required: true
     },
+    s3_key: {
+        type: String,
+        required: true
+    },
     date: {
         type: Date,
         default: Date.now()

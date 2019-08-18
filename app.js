@@ -26,35 +26,35 @@ dotenv.config();
 // }));
 
 app.use(express.static('frontend'));
-app.use(express.static('data'));
+// app.use(express.static('data'));
 
-const fileStorage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, 'data/image_post/');
-  },
-  filename: (req, file, cb) => {
-    cb(null, new Date().toISOString() + '-' + file.originalname);
-  }
-});
+// const fileStorage = multer.diskStorage({
+//   destination: (req, file, cb) => {
+//     cb(null, 'data/image_post/');
+//   },
+//   filename: (req, file, cb) => {
+//     cb(null, new Date().toISOString() + '-' + file.originalname);
+//   }
+// });
 
-const fileFilter = (req, file, cb) => {
-  if (
-    file.mimetype === 'image/png' ||
-    file.mimetype === 'image/jpg' ||
-    file.mimetype === 'image/jpeg'
-  ) {
-    cb(null, true);
-  } else {
-    cb(null, false);
-  }
-};
+// const fileFilter = (req, file, cb) => {
+//   if (
+//     file.mimetype === 'image/png' ||
+//     file.mimetype === 'image/jpg' ||
+//     file.mimetype === 'image/jpeg'
+//   ) {
+//     cb(null, true);
+//   } else {
+//     cb(null, false);
+//   }
+// };
 
-app.use(
-  multer({
-    storage: fileStorage,
-    fileFilter: fileFilter
-  }).single('image')
-);
+// app.use(
+//   multer({
+//     storage: fileStorage,
+//     fileFilter: fileFilter
+//   }).single('image')
+// );
 
 app.use(bodyParser.urlencoded({
   extended: false

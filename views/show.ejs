@@ -27,11 +27,11 @@
         <div class="updateDelete">
           <button class="updateBtn" >Update</button>
           <a href="/show/delete/<%=post._id%>/<%=post.photoURL%>"> <button class="deleteBtn" >Delete</button> </a>  
-          <a href="/image_post/<%=post.photoURL%>" download> <button>Download</button> </a> 
+          <a href="<%=post.photoURL%>" download> <button>Download</button> </a> 
         </div>
 
         <div class="image">
-          <img src="/image_post/<%=post.photoURL%>" alt="image">
+          <img src="<%=post.photoURL%>" alt="image">
         </div>
       </div> 
 
