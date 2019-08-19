@@ -12,6 +12,6 @@ router.post("/", uploadx.single("image"), upload.POST_upload);
 
 const show = require("../controllers/show");
 router.get("/show", show.GET_post);
-router.get("/show/delete/:id/:photoURL", show.DELETE_POST);
+router.get("/show/delete/:id", show.DELETE_POST);
 
 module.exports = router;
